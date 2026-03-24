@@ -4,7 +4,7 @@ Upload documents. Ask questions. Get cited answers. Powered by RAG (Retrieval-Au
 
 ## Live Demo
 
-[Live App](https://your-aws-url-here) | [GitHub Repo](https://github.com/Prudhviteja9/DocBrain)
+[Live App](https://chij78p9xh.us-east-1.awsapprunner.com) | [GitHub Repo](https://github.com/Prudhviteja9/DocBrain)
 
 ## Architecture
 
