@@ -41,13 +41,12 @@ class VectorStore:
         """
 
         if persist_directory is None:
-            # Default: save in project folder / chroma_data
             persist_directory = str(Path(__file__).parent.parent.parent / "chroma_data")
 
-        # Create the ChromaDB client
-        # PersistentClient = data saved to disk (survives restart)
-        # Like buying a FILING CABINET — documents stay even if you leave
-        self.client = chromadb.PersistentClient(path=persist_directory)
+        try:
+            self.client = chromadb.PersistentClient(path=persist_directory)
+        except Exception:
+            self.client = chromadb.Client()
 
     def get_or_create_collection(self, collection_name: str = "documents"):
         """
